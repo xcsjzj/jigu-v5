@@ -6259,7 +6259,7 @@ function renderProtocolList() {
           '<div class="protocol-card-evidence">循证来源：' + (p.evidence || '临床实践共识') + '</div>' +
         '</div>' +
       '</div>' +
-      '<div class="protocol-card-desc">' + (p.description || (p.causes ? '针对' + p.name + '的分阶段疼痛管理方案，涵盖病因分析与分期干预。' : '')) + '</div>' +
+      '<div class="protocol-card-desc">' + (p.description || (p.isPain ? '针对' + p.name + '的分阶段疼痛管理方案，涵盖病因分析与分期干预。' : '')) + '</div>' +
       '<span class="protocol-card-badge" data-cat="' + p.category + '">' + p.categoryName + '</span>' +
       (p.isPro ? ' <span class="pro-badge">PRO</span>' : '') +
       (p.isPain ? ' <span style="display:inline-block;padding:2px 8px;background:linear-gradient(135deg,var(--status-error-default),#dc2626);color:#fff;font-size:11px;font-weight:600;border-radius:20px;margin-left:4px;">疼痛</span>' : '') +
@@ -6325,7 +6325,7 @@ function showProtocolDetail(id) {
     '<div class="protocol-detail-header">' +
       '<div class="protocol-detail-title">' + p.name + (p.isPro ? ' <span class="pro-badge">PRO</span>' : '') + (p.isPain ? ' <span style="display:inline-block;padding:2px 8px;background:linear-gradient(135deg,var(--status-error-default),#dc2626);color:#fff;font-size:11px;font-weight:600;border-radius:20px;">疼痛</span>' : '') + '</div>' +
       '<div class="protocol-detail-evidence">循证来源：' + (p.evidence || '临床实践共识') + '</div>' +
-      '<div class="protocol-detail-desc">' + (p.description || (p.causes ? '针对' + p.name + '的分阶段疼痛管理方案，涵盖病因分析、临床表现与分期干预。' : '')) + '</div>' +
+      '<div class="protocol-detail-desc">' + (p.description || (p.isPain ? '针对' + p.name + '的分阶段疼痛管理方案，涵盖病因分析、临床表现与分期干预。' : '')) + '</div>' +
       '<span class="protocol-card-badge" data-cat="' + p.category + '" style="margin-top:8px;">' + p.categoryName + '</span>' +
     '</div>' +
     extraHtml +
