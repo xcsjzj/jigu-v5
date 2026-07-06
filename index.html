@@ -2474,47 +2474,9 @@ body { display: flex; flex-direction: column; width: 100%; max-width: 100%; marg
   .form-label {
     font-size: 14px;
   }
-  .tabbar {
+  .desktop-nav {
     display: none;
   }
-  .desktop-nav {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacer-4);
-    padding: var(--spacer-16) var(--spacer-32) var(--spacer-24);
-    background: var(--bg-base-default);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-neutral-l1);
-    margin: 0 -32px var(--spacer-24);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-  }
-  .desktop-nav-item {
-    padding: var(--spacer-10) var(--spacer-20);
-    font-size: var(--body-base-font-size);
-    font-weight: var(--font-weight-medium);
-    color: var(--text-secondary);
-    border-radius: var(--radius-full);
-    cursor: pointer;
-    transition: background .15s ease, color .15s ease;
-    min-height: 40px;
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-  }
-  .desktop-nav-item:hover {
-    background: var(--bg-brand-popup);
-    color: var(--text-brand);
-  }
-  .desktop-nav-item.active {
-    background: var(--bg-brand);
-    color: var(--text-onbrand);
-    box-shadow: 0 4px 12px -2px rgba(75,63,227,0.35);
-  }
-  .page { padding-top: 0; }
-  .content { padding-top: 0; }
 }
 
 /* 桌面端导航默认隐藏（移动端显示tabbar） */
