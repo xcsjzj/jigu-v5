@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#4B3FE3">
 <meta name="apple-mobile-web-app-title" content="肌骨速查">
-<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='40' fill='%234B3FE3'/><path d='M90 40 L130 90 L90 140 L50 90 Z' fill='white' opacity='0.95'/><circle cx='90' cy='90' r='16' fill='%234B3FE3'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='36' fill='%234B3FE3'/><rect x='78' y='48' width='24' height='84' rx='12' fill='white'/><rect x='48' y='78' width='84' height='24' rx='12' fill='white'/></svg>">
 <title>肌骨康复速查 V5.0 专业版</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -6276,8 +6276,6 @@ function showProtocolDetail(id) {
   var p = rehabProtocols.find(function(x) { return x.id === id; });
   if (!p) return;
   
-  showPage('protocol-detail', true);
-  
   var container = document.getElementById('page-protocol-detail');
   if (!container) {
     container = document.createElement('div');
@@ -6285,6 +6283,8 @@ function showProtocolDetail(id) {
     container.id = 'page-protocol-detail';
     document.getElementById('content').appendChild(container);
   }
+  
+  showPage('protocol-detail', true);
   
   var stagesHtml = p.stages.map(function(s, i) {
     var exercises = s.exercises.map(function(e) {
